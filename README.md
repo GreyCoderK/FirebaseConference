@@ -3,7 +3,7 @@
 
 # Firebase Conference
 
-__Guide pour la conférence de firebase, pour toutes les personnes qui assisteront à cette conférence dans l'optique que ceux-ci puissent revenir sur les propos de la conférence et aussi pratiquer par des exemples__
+__Guide pour la conférence de Firebase, pour toutes les personnes qui assisteront à cette conférence dans l'optique que ceux-ci puissent revenir sur les propos de la conférence et aussi pratiquer par des exemples__
 
 
 # Plan de cette session sur Firebase
@@ -34,14 +34,14 @@ Firebase est un ensemble de services d'hébergement pour n'importe quel type d'a
 
 ## Philosophie de Firebase
 
-L’objectif de la création de [Firebase.google.com](Firebase.google.com) en 2011 par James Tamplin et Andrew Lee est d’éviter aux professionnels et aux particuliers de s’engager dans un processus complexe de création et de maintenance d’une architecture serveur.
+L’objectif de la création de [Firebase.google.com](https://firebase.google.com) en 2011 par James Tamplin et Andrew Lee est d’éviter aux professionnels et aux particuliers de s’engager dans un processus complexe de création et de maintenance d’une architecture serveur.
 
 De plus, la plateforme peut être exploitée par plusieurs utilisateurs en même temps sans connaître un quelconque bug. La praticité est également au rendez-vous grâce à ses fonctionnalités intuitives. Depuis le rachat de la plateforme par Google en 2014, Firebase sdks a connu de nombreuses améliorations et n’a de cesse de satisfaire ses utilisateurs.
 
 
 ## Quels services utiliser avec Firebase ?
 
-[Firebase](firebase.google.com) met à votre disposition différents services pouvant être répartis en deux catégories :
+[Firebase](https://firebase.google.com) met à votre disposition différents services pouvant être répartis en deux catégories :
   - Les outils de développement et de test de son application
   - Les outils permettant d’augmenter et d’engager ses cibles.
   
@@ -64,7 +64,7 @@ De plus, la plateforme peut être exploitée par plusieurs utilisateurs en même
   *N.B:* Pour toute la suite de cette session nous utiliserons l'offre gratuite de firebase, donc vous pourriez suivre sans aucun souci
  
   * Pour la création d'une base de données avec Firebase, il faut suivre les étapes suivantes:
-    1. Se rendre sur le site [console.firebase.google.com](console.firebase.google.com/)
+    1. Se rendre sur le site [console.firebase.google.com](https://console.firebase.google.com/)
     2. Cliquer sur __+ ajouter un projet__(__+ add project__ en anglais)
     3. Donner un nom au projet puis continuer
     4. Décider d'activer les services **Google Analytics** ou pas pour ce projet
@@ -79,7 +79,7 @@ De plus, la plateforme peut être exploitée par plusieurs utilisateurs en même
  ## Intégration de firebase à son projet
  
   * Pour intégrer Firebase à son projet il faut suivre les étapes suivantes:
-    1. Se rendre sur le site [console.firebase.google.com](console.firebase.google.com/)
+    1. Se rendre sur le site [console.firebase.google.com](https://console.firebase.google.com/)
     2. Sélectionner le projet
     3. Sélectionner l'application (**Web, IOS ou Android**)
     4. Suivre les instructions selon le types de votre projet et les besoin de votre projet
