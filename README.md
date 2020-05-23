@@ -14,7 +14,7 @@ __Guide pour la conférence de Firebase, pour toutes les personnes qui assistero
   - Un peu de pratique avec Firebase(FireStore)
     - Créer un base de données Firebase
     - Intégration de firebase à son projet
-    - Exemple
+  - Exemple
 
 # Ce qu'il faut savoir sur Firebase
 
@@ -84,4 +84,8 @@ De plus, la plateforme peut être exploitée par plusieurs utilisateurs en même
     3. Sélectionner l'application (**Web, IOS ou Android**)
     4. Suivre les instructions selon le types de votre projet et les besoin de votre projet
     
- ## Exemple
+# Exemple
+
+> **L’exemple n’est pas le meilleur moyen de convaincre, c’est le seul.**
+> *-Gandhi*
+
