@@ -15,6 +15,7 @@ __Guide pour la conférence de Firebase, pour toutes les personnes qui assistero
     - Créer un base de données Firebase
     - Intégration de firebase à son projet
   - Exemple
+  - D'autre sources
 
 # Ce qu'il faut savoir sur Firebase
 
@@ -89,3 +90,8 @@ De plus, la plateforme peut être exploitée par plusieurs utilisateurs en même
 > **L’exemple n’est pas le meilleur moyen de convaincre, c’est le seul.**
 > *-Gandhi*
 
+
+# D'autre sources
+
+> **Avec le temps et la patience, la feuille du mûrier devient de la soie.**
+> *-Proverbe chinois*
