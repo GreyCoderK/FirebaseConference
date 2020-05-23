@@ -16,6 +16,7 @@ __Guide pour la conférence de Firebase, pour toutes les personnes qui assistero
     - Intégration de firebase à son projet
   - Exemple
   - D'autre sources
+  - Remerciement
 
 # Ce qu'il faut savoir sur Firebase
 
@@ -85,13 +86,52 @@ De plus, la plateforme peut être exploitée par plusieurs utilisateurs en même
     3. Sélectionner l'application (**Web, IOS ou Android**)
     4. Suivre les instructions selon le types de votre projet et les besoin de votre projet
     
+    
+    
 # Exemple
 
 > **L’exemple n’est pas le meilleur moyen de convaincre, c’est le seul.**
 > *-Gandhi*
+
+Pour cet exemple nous allons nous inspirer du tutoriel sur [firestore-web](https://codelabs.developers.google.com/codelabs/firestore-web/). A la différence que cete fois nous allons essayer d'implementer avec d'autres langages ou framework autre que le javascript classique.
+
+![Image du projet](https://github.com/firebase/friendlyeats-web/raw/master/docs/finished_image.png)
+
+L'objectif de cette approche est de nous permettre d'avoir un aperçu sur plusieurs façon d'intégrer firebase à notre projet.
+Les fichiers de base pour pouvoir suivre les différentes implémentations se situe dans `Base`
+Pour démarrez commencer par cloner ce repository grâce, au gestionnaire de package [git](https://git-scm.com/downloads) si vous n'avez pas encore ça sur votre machine.
+
+```bash
+git clone https://github.com/GreyCoderK/FirebaseConference.git
+```
+
+Puis taper la commande précédente à l'interieur **d'un invite de commande** pour récuperer cela localement chez vous.
+
+* Un aperçu des differents langages qui seront utilisés : 
+
+  * [golang](./golang)
+  * [nodejs](./nodejs)
+  * [python](./python)
+
 
 
 # D'autre sources
 
 > **Avec le temps et la patience, la feuille du mûrier devient de la soie.**
 > *-Proverbe chinois*
+
+* [La documentation](https://firebase.google.com/docs/firestore/)
+* [une playlist sur l'implementation web](https://www.youtube.com/watch?v=2Vf1D-rUMwE&list=PLl-K7zZEsYLmnJ_FpMOZgyg6XcIGBu2OX)
+* [Un ensemble de ressource sur Firebase](https://github.com/jthegedus/awesome-firebase)
+
+
+
+# Remerciements
+
+> **Dans la vie, entourez vous des personnes qui illuminent votre chemin**
+> *-plaisir des yeux sept hanou*
+
+* *__@ The Day__* Pour tous ces enseignements et pour ce qu'il fais pour la communauté*
+* *__@ EZFRICA__* Pour m'avoir donné cette occasion de vous parlez de Firebase*
+* *__@ Donutson__* Pour les relectures, corrections et suggestions*
+* *__@ Mr Mathématiques__* Pour le plan de ce document* 
