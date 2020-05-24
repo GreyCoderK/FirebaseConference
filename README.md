@@ -12,7 +12,7 @@ __Guide pour la conférence de Firebase, pour toutes les personnes qui assistero
     - Qu'est ce que Firebase ?
     - Philosophie de Firebase
   - Un peu de pratique avec Firebase(FireStore)
-    - Créer un base de données Firebase
+    - Créer une base de données Firebase
     - Intégration de firebase à son projet
   - Exemple
   - D'autre sources
@@ -60,7 +60,7 @@ De plus, la plateforme peut être exploitée par plusieurs utilisateurs en même
  ## Créer une base de données Firebase
   
   - Prérequis pour avoir accès à Firebase
-    Il faut tous simplement disposer d'un compte *__google(Gmail)__*
+    Il faut tout simplement disposer d'un compte *__google(Gmail)__*
     
  
   *N.B:* Pour toute la suite de cette session nous utiliserons l'offre gratuite de firebase, donc vous pourriez suivre sans aucun souci
@@ -71,7 +71,7 @@ De plus, la plateforme peut être exploitée par plusieurs utilisateurs en même
     3. Donner un nom au projet puis continuer
     4. Décider d'activer les services **Google Analytics** ou pas pour ce projet
     5. Configurer **Google Analytics** puis créer le projet
-    6. Une fois le projet créer, rendez-vous dans le menu latteral puis **Database**
+    6. Une fois le projet créer, rendez-vous dans le menu latéral puis **Database**
     7. Cliquer sur le boutton **Créer une base de donnée**
     8. Sélectionner le mode de votre application
     9. Définir l'emplacement du **Cloud Firestore**
