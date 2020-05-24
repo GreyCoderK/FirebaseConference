@@ -131,7 +131,7 @@ Puis taper la commande précédente à l'interieur **d'un invite de commande** p
 > **Dans la vie, entourez vous des personnes qui illuminent votre chemin**
 > *-plaisir des yeux sept hanou*
 
-* *__@ The Day__* Pour tous ces enseignements et pour ce qu'il fais pour la communauté*
-* *__@ EZFRICA__* Pour m'avoir donné cette occasion de vous parlez de Firebase*
-* *__@ Donutson__* Pour les relectures, corrections et suggestions*
-* *__@ Mr Mathématiques__* Pour le plan de ce document* 
+* @The_Day *Pour tous ces enseignements et pour ce qu'il fais pour la communauté*
+* @EZFRICA *Pour m'avoir donné cette occasion de vous parlez de Firebase*
+* @Donutson *Pour les relectures, corrections et suggestions*
+* @Mr_Mathematiques *Pour le plan de ce document* 
