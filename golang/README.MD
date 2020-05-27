@@ -42,7 +42,7 @@ go get -u firebase.google.com/go
 Pour l'instant nous allons juste créer un simple serveur Go, sur le serveur 8080
 
 ```go
-/namespace of the package, Default package name main (package du fichier, par défaut le nom du package est main)
+//namespace of the package, Default package name main (package du fichier, par défaut le nom du package est main)
 package main
 
 // import file (importation des fichier)
