@@ -1,3 +1,4 @@
 python/venv/*
 golang/static/js/*
 */node_modules
+*-lock.json
