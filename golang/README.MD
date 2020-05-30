@@ -52,7 +52,8 @@ import (
 	"log"
 	"net/http"
 
-	"cloud.google.com/go/firestore"
+	firebase "firebase.google.com/go"
+	"google.golang.org/api/option"
 )
 
 //variable of Template type for get frontend template file (Variable de type Template pour avoir acces au fichier front)
@@ -63,19 +64,6 @@ var fileServer http.Handler
 func init() {
 	//tpl = template.Must(template.ParseGlob("./template/*")) // pour atteindre un dossier (for get all file in folder)
 	tpl = template.Must(template.ParseFiles("./template/index.html")) // pour atteindre un fichier (for get a file)
-}
-
-func createClient(ctx context.Context) *firestore.Client {
-	// Sets your Google Cloud Platform project ID.
-	projectID := "YOUR_PROJECT"
-
-	client, err := firestore.NewClient(ctx, projectID)
-	if err != nil {
-		log.Fatalf("Failed to create client: %v", err)
-	}
-	// Close client when done with
-	// defer client.Close()
-	return client
 }
 
 //HandleError function for handle an error (La fonction pour gérer les erreurs)
@@ -94,6 +82,23 @@ func hello(w http.ResponseWriter, r *http.Request) {
 
 //endpoint( point d'entrée de l'application)
 func main() {
+	projectID := "restaurant-83ea4"
+	opt := option.WithCredentialsFile("./ServiceAccount.json")
+	config := &firebase.Config{ProjectID: projectID}
+	app, err := firebase.NewApp(context.Background(), config, opt)
+
+	if err != nil {
+		log.Fatalf("error initializing app: %v\n", err)
+	}
+
+	client, err := app.Firestore(context.Background())
+	if err != nil {
+		log.Fatalf("Failed to create client: %v", err)
+	}
+
+	// Close client when done with
+	defer client.Close()
+
 	mux := http.NewServeMux() //Create a custom server (Création d'un server)
 
 	//Give access to assets files( Donner un accès au fichier image, style, ...)
@@ -104,6 +109,7 @@ func main() {
 	mux.HandleFunc("/", hello)        //Execute a function on a select url (Executer une fonction sur quand une url est défini)
 	http.ListenAndServe(":3000", mux) //Launch the server on port 8080
 }
+
 ```
 
 Puis rendez-vous dans votre terminal, ensuite taper :
