@@ -1,3 +1,5 @@
+![Firebase image](https://junto.fr/wp-content/uploads/2019/04/facebook-post-348.jpg)
+
 > __Un voyage de mille lieues a commencé par un pas.__
 > *-Proverbe chinois*
 
@@ -64,6 +66,8 @@ Firebase nous propose 2 types de base de donnée, à savoir :
   - Cloud Firestore 
   - Realtime Database
 
+
+![Cloud Firestore image](https://halovina.com/wp-content/uploads/2019/08/firestore-halovina.png)
 
 ### Qu'est ce que FireStore ?
   
@@ -239,4 +243,4 @@ Puis taper la commande précédente à l'interieur **d'un invite de commande** p
 * @The_Day *Pour tous ces enseignements et pour ce qu'il fais pour la communauté*
 * @EZFRICA *Pour m'avoir donné cette occasion de vous parlez de Firebase*
 * @Donutson *Pour les relectures, corrections et suggestions*
-* @Mr_Mathematiques *Pour le plan de ce document* 
+  * @Mr_Mathematiques *Pour le plan de ce document* 
