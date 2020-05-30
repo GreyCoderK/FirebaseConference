@@ -56,12 +56,15 @@ De plus, la plateforme peut être exploitée par plusieurs utilisateurs en même
 [Firebase](https://firebase.google.com) met à votre disposition différents services pouvant être répartis en deux catégories :
   - Les outils de développement et de test de son application
   - Les outils permettant d’augmenter et d’engager ses cibles.
-  
+
+
 ## Les types de Base de Donnée que nous offre Firebase
+
 Firebase nous propose 2 types de base de donnée, à savoir :
   - Cloud Firestore 
   - Realtime Database
-  
+
+
 ### Qu'est ce que FireStore ?
   
 Cloud Firestore est une base de données de documents NoSQL sans serveur, cloud native, entièrement gérée et rapide. Ce service simplifie le stockage, la synchronisation et l'interrogation des données pour les applications Web, mobiles et IoT à l'échelle mondiale. Ses bibliothèques clientes permettent une synchronisation en direct et un fonctionnement hors connexion, tandis que ses fonctionnalités de sécurité et ses intégrations à Firebase et Google Cloud Platform (GCP) accélèrent le développement d'applications véritablement sans serveur.
@@ -75,11 +78,13 @@ La base de données en temps réel Firebase est une base de données hébergée 
 
 Pour la suite de cette section nous allons nous consacrer entièrement à *Cloud FireStore* et essayer de voir en détail les différentes fonctionnalités.
 
+
 ## Fonctionnement de FireStore
 
 Comme nous l'avons souligné précédement Firebase est une base de donnée NoSQL. Donc nous allons chercher à savoir comment celle-ci fonctionne pour pouvoir comprendre le fonctionnement de FireStore.
 
 ### Qu'est ce que c'est le NoSQL ?
+
 Le NoSQL, pour "not only SQL", désigne les bases de données qui ne sont pas fondées sur l'architecture classique des bases de données relationnelles. Développé à l'origine pour gérer du big data, l'utilisation de base de données NoSQL a explosée depuis quelques années. Mais qu'est-ce que réellement le NoSQL ?
 
 ### Plusieurs espèces de NoSQL
@@ -94,9 +99,11 @@ Lorsque l'on parle de NoSQL, on regroupe des systèmes de base de données qui n
 
   - Les bases orientées *graphe*, présentent les données sous forme de noeud et de relation. Cette structure permet de récupérer simplement des relations complexes. Un exemple de base graphe est [Neo4J](https://neo4j.com/).
 
-  *N.B* : FireStore est une base de donnée orientées document
+*N.B* : Cloud FireStore est une base de donnée orientées document
+
 
   ![Firestore data organisation](https://static.javatpoint.com/tutorial/firebase/images/firebase-data-organization-in-firestore.png)
+
 
   - Explication du schéma
 
@@ -104,7 +111,9 @@ Lorsque l'on parle de NoSQL, on regroupe des systèmes de base de données qui n
 
   Un document est un enregistrement léger qui contient un champ, qui correspond aux valeurs. Un nom identifie chaque document et nous pouvons traiter les documents comme des enregistrements JSON légers.
 
+
   - Un aperçu de l'organisation de donnée dans Firebase
+
   ![Aperçu dans Firebase](https://miro.medium.com/max/2050/1*8WFTGIkbejzIYw2w8VBr2Q.png)
 
 
@@ -155,7 +164,9 @@ Lorsque l'on parle de NoSQL, on regroupe des systèmes de base de données qui n
 
 Pour cet exemple nous allons nous inspirer du tutoriel sur [firestore-web](https://codelabs.developers.google.com/codelabs/firestore-web/). A la différence que cette fois nous allons essayer d'implementer avec d'autres langages ou framework autre que le javascript classique.
 
+
 ![Image du projet](https://github.com/firebase/friendlyeats-web/raw/master/docs/finished_image.png)
+
 
 ## Quelques notes avant de debuter
 
@@ -165,36 +176,44 @@ Nous soulignerons également que nous partons de 0 pour obtenir le resultat de c
 
 Dans l'exemple du tutoriel nous avons une Single Page Application (*SPA*), et la logique est entièrement gèrer depuis le javascript. Il pourrait être possible alors que nous fassions quelques changement majeur dans le code de base html qui lui proviens du tutoriel précédent. Donc nous pourrions peut-être passé d'un SPA à une application sur plusieurs pages.
 
+
 ## Objectif de notre approche
 
 L'objectif de cette approche est de nous permettre d'avoir un aperçu sur plusieurs façon d'intégrer firebase à notre projet.
 Les fichiers de base pour pouvoir suivre les différentes implémentations se situe dans `Base`
 Pour démarrez commencer par cloner ce repository grâce, au gestionnaire de package [git](https://git-scm.com/downloads) si vous n'avez pas encore ça sur votre machine.
 
+
 ```bash
 git clone https://github.com/GreyCoderK/FirebaseConference.git
 ```
 
+
 Puis taper la commande précédente à l'interieur **d'un invite de commande** pour récuperer cela localement chez vous.
 
+
 * Un aperçu des différents langages qui seront utilisés : 
+
 
   * [Golang](./golang)
   * [NodeJs](./nodejs)
   * [Python](./python)
 
+
 * Explication du choix des langages :
   
   * _Golang_
-  
+
     Pour répondre à ce besoin de simplicité, et ne pas avoir un langage qui empile les fonctionnalités pour faire plaisir au premier quidam, il se veut simple à lire, à comprendre et à prendre en main.
     Libre ensuite au développeur de penser son programme comme bon lui semble.
     Le projet Golang est à l’origine un projet interne chez Google dont le but est de résoudre les problèmes de montée en charge. Et, puisque ce problème est commun à beaucoup d’entreprises, le projet est devenu un langage à part entière avec le concept de concurrence asynchrone en point de mire.
+
 
   * _NodeJs_
 
     NodeJS est une plateforme qui s’appuie sur le moteur JavaScript de Chrome permettant de développer rapidement des applications réseau rapides et évolutives. NodeJS utilise un modèle événementiel, aux E/S non bloquantes qui le rend léger et efficace, idéal pour les applications gérant d’importants volumes de données en temps réel sur des dispositifs distribués.
     NodeJS utilise JavaScript, un langage très utilisé par les développeurs web dans les applications front-end, côté navigateur. L’interpréteur de syntaxe JavaScript NodeJS a été réécrit et compilé en C++ ce qui en fait un interpréteur JavaScript bien plus rapide que celui du navigateur.
+
 
   * _Python_
 
