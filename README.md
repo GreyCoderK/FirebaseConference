@@ -243,4 +243,4 @@ Puis taper la commande précédente à l'interieur **d'un invite de commande** p
 * @The_Day *Pour tous ces enseignements et pour ce qu'il fais pour la communauté*
 * @EZFRICA *Pour m'avoir donné cette occasion de vous parlez de Firebase*
 * @Donutson *Pour les relectures, corrections et suggestions*
-  * @Mr_Mathematiques *Pour le plan de ce document* 
+* @Mr_Mathematiques *Pour le plan de ce document* 
