@@ -104,7 +104,7 @@ Lorsque l'on parle de NoSQL, on regroupe des systèmes de base de données qui n
 
   Un document est un enregistrement léger qui contient un champ, qui correspond aux valeurs. Un nom identifie chaque document et nous pouvons traiter les documents comme des enregistrements JSON légers.
 
-  Un aperçu de l'organisation de donnée dans Firebase
+  - Un aperçu de l'organisation de donnée dans Firebase
   ![Aperçu dans Firebase](https://miro.medium.com/max/2050/1*8WFTGIkbejzIYw2w8VBr2Q.png)
 
 
@@ -186,15 +186,18 @@ Puis taper la commande précédente à l'interieur **d'un invite de commande** p
 * Explication du choix des langages :
   
   * _Golang_
+  
     Pour répondre à ce besoin de simplicité, et ne pas avoir un langage qui empile les fonctionnalités pour faire plaisir au premier quidam, il se veut simple à lire, à comprendre et à prendre en main.
     Libre ensuite au développeur de penser son programme comme bon lui semble.
     Le projet Golang est à l’origine un projet interne chez Google dont le but est de résoudre les problèmes de montée en charge. Et, puisque ce problème est commun à beaucoup d’entreprises, le projet est devenu un langage à part entière avec le concept de concurrence asynchrone en point de mire.
 
   * _NodeJs_
+
     NodeJS est une plateforme qui s’appuie sur le moteur JavaScript de Chrome permettant de développer rapidement des applications réseau rapides et évolutives. NodeJS utilise un modèle événementiel, aux E/S non bloquantes qui le rend léger et efficace, idéal pour les applications gérant d’importants volumes de données en temps réel sur des dispositifs distribués.
     NodeJS utilise JavaScript, un langage très utilisé par les développeurs web dans les applications front-end, côté navigateur. L’interpréteur de syntaxe JavaScript NodeJS a été réécrit et compilé en C++ ce qui en fait un interpréteur JavaScript bien plus rapide que celui du navigateur.
 
   * _Python_
+
     Si vous débutez dans le codage, commencez par le langage Python, car il est puissant sans être trop compliqué. Python est un langage relativement nouveau. Il est donc plus simple que les anciens, ce qui le rend plus intuitif et plus rapide à maîtriser.
     À peu près tout ce que vous pouvez créer avec d’autres langages de programmation, tels que C ++ ou Ruby, peut être créé avec Python. Vous pouvez également faire de l’apprentissage machine, analyser des données, traiter le langage naturel, et bien d'autres choses encore.
 
