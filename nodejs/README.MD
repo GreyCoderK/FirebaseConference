@@ -118,3 +118,6 @@ node index.js
 ```
 
 Pour comprendre en détail ce que nous avons effectué avec Express.Js je vous recommende la [documentation](https://expressjs.com/fr/)
+
+# Réorganisation des fichiers template
+
