@@ -24,6 +24,20 @@ Cette conception permet également le fonctionnement sans réécriture sur des a
 
 Pour installer Go sur sa machine, il faut se rendre sur le site suivant [https://golang.org/doc/install](https://golang.org/doc/install) puis suivre les instructions en fonction de son système d'exploitation
 
+# Création d'un projet
+
+Pour créer un avec go il suffit tout simplement de créer un dossier portant le nom de votre projet dans lequel vous allez mettre les fichiers que vous coderez ensuite.
+
+Une fois passé cette étape, tapez la commande suivante dans le repertoire du fichier:
+
+```
+go mod init
+```
+
+cette commande initialise notre projet en tant que module golang, cela facilite la gestion des dépendances.
+
+Nous pouvons commencer à coder.
+
 # Intégrer Firebase à son projet
 
 Une fois que vous avez installé **Golang** sur votre machine, installer Firebase dans votre projet.
@@ -39,13 +53,16 @@ go get -u firebase.google.com/go
 
 # Création d'un server local
 
-Pour l'instant nous allons juste créer un simple serveur Go, sur le serveur 8080
+Pour l'instant nous allons juste faire les configurations de base de notre serveur, qui tournera sur le port 3000.
+Après avoir configurer le serveur, nous allons connecter notre projet golang à notre base de donnée firebase. 
 
 ```go
-//namespace of the package, Default package name main (package du fichier, par défaut le nom du package est main)
+//namespace of the package, Default package name main 
+//(package du fichier, par défaut le nom du package est main)
 package main
 
-// import file (importation des fichier)
+// import file 
+//(importation des fichier)
 import (
 	"context"
 	"html/template"
@@ -56,17 +73,28 @@ import (
 	"google.golang.org/api/option"
 )
 
-//variable of Template type for get frontend template file (Variable de type Template pour avoir acces au fichier front)
+//variable of Template type for get frontend template file 
+//(Variable de type Template pour avoir acces au fichier front)
 var tpl *template.Template
+
+//Handler variable for file serve
+//(variable de type http.Handler pour utiliser les fichiers static)
 var fileServer http.Handler
 
-//init function it execute only one time when the file is run (La fonction est initialisé une seule fois au démarrage du serveur)
+//init function it execute only one time when the file is run 
+//(La fonction est initialisé une seule fois au démarrage du serveur)
 func init() {
-	//tpl = template.Must(template.ParseGlob("./template/*")) // pour atteindre un dossier (for get all file in folder)
-	tpl = template.Must(template.ParseFiles("./template/index.html")) // pour atteindre un fichier (for get a file)
+	//(for get all file in folder)
+	//pour atteindre un dossier 
+	//tpl = template.Must(template.ParseGlob("./template/*"))
+
+	// pour atteindre un fichier 
+	// (for get a file)
+	tpl = template.Must(template.ParseFiles("./template/index.html")) 
 }
 
-//HandleError function for handle an error (La fonction pour gérer les erreurs)
+//HandleError function for handle an error 
+//(La fonction pour gérer les erreurs)
 func HandleError(w http.ResponseWriter, err error) {
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -74,14 +102,21 @@ func HandleError(w http.ResponseWriter, err error) {
 	}
 }
 
-//hello function for show index page (La fonction pour afficher la page d'index)
+//hello function for show index page 
+//(La fonction pour afficher la page d'index)
 func hello(w http.ResponseWriter, r *http.Request) {
 	err := tpl.ExecuteTemplate(w, tpl.Name(), fileServer)
 	HandleError(w, err)
 }
 
-//endpoint( point d'entrée de l'application)
+//endpoint
+//(point d'entrée de l'application)
 func main() {
+
+	//set up for firestore configuration
+	//configuration pour l'integration de firebase
+	//ServiceAccount.json is the file set up of the firebase database, put this file in the same folder that main.go
+	//ServiceAccount.json est le fichier de configuration de notre base de donnée il faut le mettre dans le même dossier que le main.go
 	projectID := "restaurant-83ea4"
 	opt := option.WithCredentialsFile("./ServiceAccount.json")
 	config := &firebase.Config{ProjectID: projectID}
@@ -97,25 +132,48 @@ func main() {
 	}
 
 	// Close client when done with
+	// se termine quand le client en a fini
 	defer client.Close()
 
-	mux := http.NewServeMux() //Create a custom server (Création d'un server)
+	//Create a custom server 
+	//(Création d'un server)
+	mux := http.NewServeMux()
 
-	//Give access to assets files( Donner un accès au fichier image, style, ...)
+	//Give access to assets files
+	//(Donner un accès au fichier image, style, ...)
 	mux.Handle("/images/", http.StripPrefix("/images", http.FileServer(http.Dir("./static/images"))))
 	mux.Handle("/styles/", http.StripPrefix("/styles", http.FileServer(http.Dir("./static/styles"))))
 	//mux.Handle("/js/", http.StripPrefix("/js", http.FileServer(http.Dir("./static/js"))))
 
-	mux.HandleFunc("/", hello)        //Execute a function on a select url (Executer une fonction sur quand une url est défini)
-	http.ListenAndServe(":3000", mux) //Launch the server on port 8080
+	//Execute a function on a select url 
+	//(Executer une fonction sur quand une url est défini)
+	mux.HandleFunc("/", hello)
+
+	//Launch the server on port 3000
+	//Lancer le serveur sur le port 3000
+	http.ListenAndServe(":3000", mux) 
 }
 
 ```
 
-Puis rendez-vous dans votre terminal, ensuite taper :
+ - *N.B* :
+
+	Lorque que vous lancerez le serveur, allez à cette adresse `localhost:3000/` pour avoir une vue de l'affichage.
+
+	Mais je suis au regret de vous dis que vous ne verrez presque rien pour l'instant car l'affichage est intimement lié au JavaScript donc pour avoir un bref aperçu sur le serveur. Donc pour le fait, enlever l'attribut `hidden` de quelques `div` puis relancer le serveur.
+
+	Nous venons de connecter la base de donnée *Cloud FireStore* à notre projet mais pour être sûr que cela fonctionne nous devons effectuer une requête chose que nous ne ferons pas d'aussi tôt après avoir réorganiser le fichier `index.html` afin que nous puissons voir de façon visuel les changements.
+
+	Pour télécharger le fichier `ServiceAccount.json` correspondant à votre projet je vous conseil de vous rendre dans les *paramètres* de votre projet puis *compte et service* et la vous pouvez télécharger le fichier que vous placerez dans le même dossier que le fichier principal de votre application.
+
+Puis rendez-vous dans votre terminal, ensuite tapez :
 
 ```shell
 go run main.go
 ```
 
-Pour savoir un peu plus sur les fonctions que nous avons utilisé je vous conseille vivement de bien vouloir lire la [documentation](https://golang.org/doc/).
+Pour savoir un peu plus sur le fonctionnement du web avec golang, je vous conseille vivement de bien vouloir lire la [documentation](https://golang.org/doc/) ou rendez-vous sur ce [github](https://github.com/GoesToEleven/golang-web-dev) de @GoesToEleven .
+
+
+# Réorganisation des fichiers template
+
