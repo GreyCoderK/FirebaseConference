@@ -166,7 +166,7 @@ Lorsque l'on parle de NoSQL, on regroupe des systèmes de base de données qui n
 > **L’exemple n’est pas le meilleur moyen de convaincre, c’est le seul.**
 > *-Gandhi*
 
-Pour cet exemple nous allons nous inspirer du tutoriel sur [firestore-web](https://codelabs.developers.google.com/codelabs/firestore-web/). A la différence que cette fois nous allons essayer d'implementer avec d'autres langages ou framework autre que le javascript classique.
+Pour cet exemple nous allons nous inspirer du tutoriel sur [firestore-web](https://https://github.com/GreyCoderK/friendlyeats-web/). A la différence que cette fois nous allons essayer d'implementer avec d'autres langages ou framework autre que le javascript classique.
 
 
 ![Image du projet](https://github.com/firebase/friendlyeats-web/raw/master/docs/finished_image.png)
